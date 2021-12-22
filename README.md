@@ -10,10 +10,10 @@ This repository has everything you need to run the Elastic stack on VKE using EC
 5. Wait for everything to be deployed successfully before moving forward. Check progress with `kubectl get pods -w`
 6. Modify the load balancer configurations as needed then deploy them if desired. This is completely optional.
 
-To access Kibana, simply execute the following command and visit https://127.0.0.1:5601 : `kubectl port-forward svc/kibana-sample-kb-http 5601`
+To access Kibana, simply execute the following command and visit https://127.0.0.1:5601 : `kubectl port-forward svc/kibana-kb-http 5601`
 
 You can find the password for the `elastic` user using this command:
-`kubectl get secret quickstart-es-elastic-user -o=jsonpath='{.data.elastic}' | base64 --decode; echo`
+`kubectl get secret elasticsearch-es-elastic-user -o=jsonpath='{.data.elastic}' | base64 --decode; echo`
 
 ## Disclaimer
 This is not an official Vultr repository nor is it affiliated with them in any other way.
