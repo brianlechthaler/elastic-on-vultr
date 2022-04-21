@@ -10,5 +10,6 @@ spec:
   selector:
     app: elasticsearch-es-http
   ports:
-    - port: 9200
+    - port: 443
+    - targetPort: 9200
       name: "https"
