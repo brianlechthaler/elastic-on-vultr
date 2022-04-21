@@ -11,5 +11,5 @@ spec:
     app: kibana-kb-http
   ports:
     - port: 443
-    - targetPort: 5601
+      targetPort: 5601
       name: "https"
