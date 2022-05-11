@@ -3,6 +3,10 @@ kind: Kibana
 metadata:
   name: kibana
 spec:
+  http:
+    service:
+      spec:
+        type: LoadBalancer
   version: 8.1.3
   count: 3
   elasticsearchRef:
